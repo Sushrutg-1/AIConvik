@@ -62,7 +62,7 @@ AIConvIK/
 
 ---
 
-## ⚙️ How It Works (Simple Explanation)
+## ⚙️ How It Works 
 
 1. User types a message in the frontend chat UI  
 2. Frontend sends the message to backend API  
