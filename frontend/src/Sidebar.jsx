@@ -2,6 +2,7 @@ import "./Sidebar.css";
 import { useContext, useEffect } from "react";
 import { MyContext } from "./MyContext";
 import { v4 as uuidv4 } from "uuid";
+import logo from "./assets/AIConvik.logo.png";
 
 export default function Sidebar() {
   const {
@@ -89,11 +90,7 @@ export default function Sidebar() {
     <>
       <section className="sidebar">
         <button onClick={createNewChat}>
-          <img
-            src="src/assets/AIConvik.logo.png"
-            alt="AIConvik Logo"
-            className="logo"
-          />
+          <img src={logo} alt="AIConvik Logo" className="logo" />
           Create New Chat
           <span>
             <i className="fa-solid fa-pen-to-square"></i>
