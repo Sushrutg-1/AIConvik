@@ -1,0 +1,97 @@
+.sidebar {
+  color: #b4b4b4;
+  height: 100vh;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Using gradient color */
+  background: linear-gradient(180deg, #1a1f2b 0%, #0b0e14 100%);
+  background: linear-gradient(180deg, #151921 0%, #0b0e14 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.05); /* Subtle edge separation */
+}
+
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: solid 0.5px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(180, 180, 180, 0.05);
+}
+
+button span {
+  font-size: 20px;
+}
+
+.fa-pen-to-square:hover {
+  background: linear-gradient(to bottom, #00f2ff, #00a3ff, #0066ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  color: red;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.history {
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.history li {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  margin-bottom: 0.3rem;
+  position: relative;
+  border: solid 10px transparent;
+  font-size: 14px;
+}
+
+.history li:hover {
+  background-color: rgba(180, 180, 180, 0.05);
+  border-radius: 10px;
+}
+
+.sign {
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  border-top: solid 0.5px rgba(255, 255, 255, 0.5);
+}
+
+.fa-trash {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+}
+
+.history li:hover .fa-trash {
+  opacity: 0.8;
+}
+
+.fa-trash:hover {
+  color: red;
+}
+
+.highlighted {
+  background: rgba(99, 102, 241, 0.1); /* Very faint indigo */
+  border-right: 3px solid #6366f1; /* A solid line to highlight the active chat */
+}

@@ -1,0 +1,20 @@
+* {
+  color: #ececec;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background-color: #212121;
+  display: flex;
+}

@@ -1,0 +1,34 @@
+.chats {
+  max-width: 700px;
+  overflow-y: scroll;
+  padding: 8rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+
+.userMsg {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 14px;
+  margin-left: 15rem;
+  max-width: 500px;
+  width: fit-content;
+}
+
+.AIConvikDiv {
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.hljs {
+  border-radius: 14px;
+}

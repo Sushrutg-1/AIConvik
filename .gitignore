@@ -1,9 +1,4 @@
 node_modules/
 git
 .env
-.env.local
-.env.development
-.env.production
-
 dist/
-build/

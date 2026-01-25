@@ -3,7 +3,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import chatRoute from "./routes/chat.js";
+import chatRoute from "./routes/chat.route.js";
 import initData from "./init/init.js";
 
 const app = express();
@@ -18,6 +18,7 @@ app.use(express.json());
 app.use("/api", chatRoute);
 app.use("/initdata", initData); // for Initializing Random Data
 
+//Server Listen
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT} `);
   connectDB();
