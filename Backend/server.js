@@ -12,9 +12,10 @@ const PORT = 8080;
 // Middlewares
 app.use(
   cors({
-    origin: "https://aiconvik-frontend.onrender.com/",
+    origin: "https://aiconvik-frontend.onrender.com",
   }),
 );
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
