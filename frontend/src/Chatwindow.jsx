@@ -20,12 +20,12 @@ export default function Chatwindow() {
   const [isOpen, setIsOpen] = useState(false);
 
   const getReply = async () => {
-     if (!prompt) {
+    if (!prompt) {
       return;
     }
     setLoading(true);
     setNewChat(false);
-   
+
     let options = {
       method: "POST",
       headers: {
@@ -38,7 +38,10 @@ export default function Chatwindow() {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/chat", options);
+      const response = await fetch(
+        "https://aiconvik.onrender.com/api/chat",
+        options,
+      );
       const reply = await response.json();
       // console.log(reply.reply);
       setReply(reply.reply);

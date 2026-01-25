@@ -17,7 +17,7 @@ export default function Sidebar() {
 
   const getAllThreads = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/thread");
+      const res = await fetch("https://aiconvik.onrender.com/api/thread");
       const response = await res.json();
       const filteredData = response.map((thread) => ({
         threadId: thread.threadId,
@@ -47,7 +47,7 @@ export default function Sidebar() {
     setCurrThreadId(newThreadId);
     try {
       const res = await fetch(
-        `http://localhost:8080/api/thread/${newThreadId}`,
+        `https://aiconvik.onrender.com/api/thread/${newThreadId}`,
       );
       const response = await res.json();
       // console.log(response);
@@ -66,7 +66,7 @@ export default function Sidebar() {
       };
 
       const res = await fetch(
-        `http://localhost:8080/api/thread/${threadId}`,
+        `https://aiconvik.onrender.com/api/thread/${threadId}`,
         options,
       );
       const response = await res.json();
