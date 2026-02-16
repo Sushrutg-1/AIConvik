@@ -1,6 +1,7 @@
 import express from "express";
 import Thread from "../models/Thread.model.js";
 import getOpenAIAPIResponse from "../utils/openai.js";
+import getGenAIAPIResponse from "../utils/genai.js";
 
 const router = express.Router();
 
@@ -71,7 +72,12 @@ router.post("/chat", async (req, res) => {
       await thread.save();
     }
 
-    const assistantReply = await getOpenAIAPIResponse(message);
+    // For GenAIAPI
+    const assistantReply = await getGenAIAPIResponse(message);
+
+    // For OpenAIAPI
+    // const assistantReply = await getOpenAIAPIResponse(message);
+
     if (!assistantReply || !assistantReply.trim()) {
       return res.status(500).json({
         error: "AI failed to generate response",

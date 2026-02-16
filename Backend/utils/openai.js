@@ -21,7 +21,7 @@ const getOpenAIAPIResponse = async (userMessage) => {
   try {
     const response = await fetch(
       "https://api.openai.com/v1/chat/completions",
-      options
+      options,
     );
     let data = await response.json();
     let openAIResponse = data.choices[0].message.content;
